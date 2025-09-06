@@ -381,7 +381,7 @@
 
     </header>
 
-    <section class="container mt-5 mb-5 pb-3">
+    <section class="container mb-5 pb-3">
         <div class="slider">
             <div class="slides" id="slides">
                 <div class="slide">
