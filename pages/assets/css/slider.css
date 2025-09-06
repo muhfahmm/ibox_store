@@ -1,0 +1,47 @@
+                    .slider {
+                        overflow: hidden;
+                        position: relative;
+                    }
+
+                    .slides {
+                        display: flex;
+                        transition: transform 0.6s ease-in-out;
+                    }
+
+                    .slide {
+                        min-width: 100%;
+                        transition: 0.5s;
+                    }
+
+                    .slide img {
+                        width: 100%;
+                        /* height: auto; */
+                        max-height: 590px;
+                        border-radius: 10px;
+                        object-fit: contain;
+                    }
+
+                    .navigation-manual {
+                        position: absolute;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        bottom: 10px;
+                    }
+
+                    .manual-btn {
+                        border: 1px solid wheat;
+                        padding: 4px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        transition: 0.4s;
+                    }
+
+                    .manual-btn:not(:last-child) {
+                        margin-right: 10px;
+                    }
+
+                    .manual-btn:hover,
+                    .manual-btn.active {
+                        background: grey;
+                    }

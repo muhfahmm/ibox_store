@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/slider.css">
     <style>
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -365,7 +366,6 @@
                 </ul>
             </nav>
         </div>
-
         <script>
             function toggleMenu() {
                 document.getElementById("menuNavbar").classList.toggle("show");
@@ -376,8 +376,6 @@
                 parent.classList.toggle("open");
             }
         </script>
-
-
 
     </header>
 
@@ -421,107 +419,6 @@
                     <label class="manual-btn" onclick="moveToSlide(6)"></label>
                     <label class="manual-btn" onclick="moveToSlide(7)"></label>
                 </div>
-
-                <!-- css button slider-->
-                <style>
-                    .slider {
-
-                        overflow: hidden;
-                        position: relative;
-                    }
-
-                    .slides {
-                        display: flex;
-                        transition: transform 0.6s ease-in-out;
-                    }
-
-                    .slide {
-                        min-width: 100%;
-                        transition: 0.5s;
-                    }
-
-                    .slide img {
-                        width: 100%;
-                        /* height: auto; */
-                        max-height: 590px;
-                        border-radius: 10px;
-                        object-fit: contain;
-                    }
-
-                    .navigation-manual {
-                        position: absolute;
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        bottom: 10px;
-                        padding-bottom: 30px;
-                    }
-
-                    .manual-btn {
-                        border: 1px solid wheat;
-                        padding: 4px;
-                        border-radius: 50%;
-                        cursor: pointer;
-                        transition: 0.4s;
-                    }
-
-                    .manual-btn:not(:last-child) {
-                        margin-right: 10px;
-                    }
-
-                    .manual-btn:hover,
-                    .manual-btn.active {
-                        background: grey;
-                    }
-                </style>
-
-                <!-- js button slider -->
-                <script>
-                    let slides = document.getElementById("slides");
-                    let currentIndex = 0;
-                    let forward = true;
-                    const totalSlides = document.querySelectorAll(".slide").length;
-
-                    function moveToSlide(index) {
-                        slides.style.transform = "translateX(" + -index * 100 + "%)";
-                        currentIndex = index;
-                        updateActiveButton();
-                    }
-
-                    function updateActiveButton() {
-                        let buttons = document.querySelectorAll(".manual-btn");
-                        buttons.forEach((button, index) => {
-                            if (index === currentIndex) {
-                                button.classList.add("active");
-                            } else {
-                                button.classList.remove("active");
-                            }
-                        });
-                    }
-
-                    function autoSlide() {
-                        if (forward) {
-                            if (currentIndex < totalSlides - 1) {
-                                currentIndex++;
-                            } else {
-                                forward = false;
-                                currentIndex--;
-                            }
-                        } else {
-                            if (currentIndex > 0) {
-                                currentIndex--;
-                            } else {
-                                forward = true;
-                                currentIndex++;
-                            }
-                        }
-                        moveToSlide(currentIndex);
-                    }
-
-                    setInterval(autoSlide, 3000);
-                    updateActiveButton();
-                </script>
-
                 <!-- glassmorism -->
                 <style>
                     .glass-card {
@@ -570,7 +467,116 @@
         </div>
     </section>
 
+    <section class="container">
+        <div class="wrapper">
+            <div class="product-container">
+                <div class="product-wrapper">
+                    <img src="./assets/img/img category product/mac.webp">
+                    <div class="details-product">
+                        <p class="fw-bold text-center mt-2">Mac</p>
+                        <p class="fw-semibold">Mulai dari Rp11 juta</p>
+                    </div>
+                </div>
+                <div class="product-wrapper">
+                    <img src="./assets/img/img category product/iphone.webp">
+                    <div class="details-product">
+                        <p class="fw-bold text-center mt-2">iPhone</p>
+                        <p class="fw-semibold">Mulai dari Rp8 juta</p>
+                    </div>
+                </div>
+                <div class="product-wrapper">
+                    <img src="./assets/img/img category product/ipad.webp">
+                    <div class="details-product">
+                        <p class="fw-bold text-center mt-2">iPad</p>
+                        <p class="fw-semibold">Mulai dari Rp4 juta</p>
+                    </div>
+                </div>
+                <div class="product-wrapper">
+                    <img src="./assets/img/img category product/watch.webp">
+                    <div class="details-product">
+                        <p class="fw-bold text-center mt-2">WATCH</p>
+                        <p class="fw-semibold">Mulai dari Rp3 juta</p>
+                    </div>
+                </div>
+                <div class="product-wrapper">
+                    <img src="./assets/img/img category product/music.png">
+                    <div class="details-product">
+                        <p class="fw-bold text-center mt-2">Music</p>
+                        <p class="fw-semibold">Mulai dari Rp1 juta</p>
+                    </div>
+                </div>
+                <div class="product-wrapper">
+                    <img src="./assets/img/img category product/acsesory.webp">
+                    <div class="details-product">
+                        <p class="fw-bold text-center mt-2">Aksesori</p>
+                        <p class="fw-semibold">Mulai dari Rp400 ribu</p>
+                    </div>
+                </div>
+                <div class="product-wrapper">
+                    <img src="./assets/img/img category product/airTag.png">
+                    <div class="details-product">
+                        <p class="fw-bold text-center mt-2">AirTag</p>
+                        <p class="fw-semibold">Mulai dari Rp400 ribu</p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .product-wrapper:hover {
+                    scale: 1.2;
+                    transition: .4s;
+                    background: rgba(255, 255, 255, 0.05);
+                    backdrop-filter: blur(37px);
+                    -webkit-backdrop-filter: blur(37px);
+                    border-radius: 10px;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    box-shadow:
+                        0 8px 32px rgba(0, 0, 0, 0.1),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+                        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+                        inset 0 0 0px 0px rgba(255, 255, 255, 0);
+                    position: relative;
+                    overflow: hidden;
+                }
 
+                .product-wrapper::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background: linear-gradient(90deg,
+                            transparent,
+                            rgba(255, 255, 255, 0.8),
+                            transparent);
+                }
+
+                .product-wrapper::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 1px;
+                    height: 100%;
+                    background: linear-gradient(180deg,
+                            rgba(255, 255, 255, 0.8),
+                            transparent,
+                            rgba(255, 255, 255, 0.3));
+                }
+
+                .product-wrapper img {
+                    height: 80px;
+                }
+
+                .product-container {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            </style>
+        </div>
+    </section>
+    <div class="border"></div>
+    <script src="./assets/js/slider.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
