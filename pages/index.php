@@ -469,139 +469,152 @@
 
     <section class="container">
         <div class="wrapper">
-            <div class="product-container">
-                <div class="product-wrapper">
-                    <img src="./assets/img/img category product/mac.webp">
-                    <div class="details-product">
-                        <p class="fw-bold text-center mt-2">Mac</p>
-                        <p class="fw-semibold">Mulai dari Rp11 juta</p>
+            <div class="slider-container">
+                <button class="chevron left" onclick="slide(-1)">&#10094;</button>
+                <div class="product-container" id="productSlider">
+                    <div class="product-wrapper">
+                        <img src="./assets/img/img category product/mac.webp">
+                        <div class="details-product">
+                            <p class="fw-bold text-center mt-2">Mac</p>
+                            <p class="fw-semibold">Mulai dari Rp11 juta</p>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <img src="./assets/img/img category product/iphone.webp">
+                        <div class="details-product">
+                            <p class="fw-bold text-center mt-2">iPhone</p>
+                            <p class="fw-semibold">Mulai dari Rp8 juta</p>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <img src="./assets/img/img category product/ipad.webp">
+                        <div class="details-product">
+                            <p class="fw-bold text-center mt-2">iPad</p>
+                            <p class="fw-semibold">Mulai dari Rp4 juta</p>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <img src="./assets/img/img category product/watch.webp">
+                        <div class="details-product">
+                            <p class="fw-bold text-center mt-2">WATCH</p>
+                            <p class="fw-semibold">Mulai dari Rp3 juta</p>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <img src="./assets/img/img category product/music.png">
+                        <div class="details-product">
+                            <p class="fw-bold text-center mt-2">Music</p>
+                            <p class="fw-semibold">Mulai dari Rp1 juta</p>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <img src="./assets/img/img category product/acsesory.webp">
+                        <div class="details-product">
+                            <p class="fw-bold text-center mt-2">Aksesori</p>
+                            <p class="fw-semibold">Mulai dari Rp400 ribu</p>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <img src="./assets/img/img category product/airTag.png">
+                        <div class="details-product">
+                            <p class="fw-bold text-center mt-2">AirTag</p>
+                            <p class="fw-semibold">Mulai dari Rp400 ribu</p>
+                        </div>
                     </div>
                 </div>
-                <div class="product-wrapper">
-                    <img src="./assets/img/img category product/iphone.webp">
-                    <div class="details-product">
-                        <p class="fw-bold text-center mt-2">iPhone</p>
-                        <p class="fw-semibold">Mulai dari Rp8 juta</p>
-                    </div>
-                </div>
-                <div class="product-wrapper">
-                    <img src="./assets/img/img category product/ipad.webp">
-                    <div class="details-product">
-                        <p class="fw-bold text-center mt-2">iPad</p>
-                        <p class="fw-semibold">Mulai dari Rp4 juta</p>
-                    </div>
-                </div>
-                <div class="product-wrapper">
-                    <img src="./assets/img/img category product/watch.webp">
-                    <div class="details-product">
-                        <p class="fw-bold text-center mt-2">WATCH</p>
-                        <p class="fw-semibold">Mulai dari Rp3 juta</p>
-                    </div>
-                </div>
-                <div class="product-wrapper">
-                    <img src="./assets/img/img category product/music.png">
-                    <div class="details-product">
-                        <p class="fw-bold text-center mt-2">Music</p>
-                        <p class="fw-semibold">Mulai dari Rp1 juta</p>
-                    </div>
-                </div>
-                <div class="product-wrapper">
-                    <img src="./assets/img/img category product/acsesory.webp">
-                    <div class="details-product">
-                        <p class="fw-bold text-center mt-2">Aksesori</p>
-                        <p class="fw-semibold">Mulai dari Rp400 ribu</p>
-                    </div>
-                </div>
-                <div class="product-wrapper">
-                    <img src="./assets/img/img category product/airTag.png">
-                    <div class="details-product">
-                        <p class="fw-bold text-center mt-2">AirTag</p>
-                        <p class="fw-semibold">Mulai dari Rp400 ribu</p>
-                    </div>
-                </div>
+                <button class="chevron right" onclick="slide(1)">&#10095;</button>
             </div>
-            <style>
-    .product-container {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 20px; /* jarak antar card */
-        justify-content: space-between;
-    }
-
-    .product-wrapper {
-        flex: 1 1 calc(14% - 10px); /* sesuaikan jumlah card per baris */
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        text-align: center;
-        padding: 15px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-        cursor: pointer;
-        position: relative;
-    }
-
-    .product-wrapper img {
-        height: 80px;
-        margin-bottom: 10px;
-        transition: transform 0.3s ease;
-    }
-
-    .product-wrapper:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
-
-    .product-wrapper:hover img {
-        transform: scale(1.1);
-    }
-
-    .details-product p {
-        margin: 0;
-    }
-
-    .details-product .fw-bold {
-        font-size: 14px;
-        color: #333;
-    }
-
-    .details-product .fw-semibold {
-        font-size: 13px;
-        color: #555;
-    }
-
-    /* Responsive */
-    @media (max-width: 1200px) {
-        .product-wrapper {
-            flex: 1 1 calc(20% - 10px);
-        }
-    }
-
-    @media (max-width: 992px) {
-        .product-wrapper {
-            flex: 1 1 calc(30% - 10px);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .product-wrapper {
-            flex: 1 1 calc(45% - 10px);
-        }
-    }
-
-    @media (max-width: 480px) {
-        .product-wrapper {
-            flex: 1 1 100%;
-        }
-    }
-</style>
-
         </div>
+
+        <style>
+            .slider-container {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .product-container {
+                display: flex;
+                transition: transform 0.4s ease-in-out;
+            }
+
+            .product-wrapper {
+                flex: 0 0 14%;
+                background: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                text-align: center;
+                padding: 15px;
+                margin: 0 5px;
+            }
+
+            .product-wrapper img {
+                height: 80px;
+                margin-bottom: 10px;
+            }
+
+            .chevron {
+                position: absolute;
+                top: 40%;
+                transform: translateY(-50%);
+                font-size: 28px;
+                background: rgba(255, 255, 255, 0.7);
+                border: none;
+                cursor: pointer;
+                padding: 5px 10px;
+                border-radius: 50%;
+                z-index: 2;
+            }
+
+            .chevron.left {
+                left: 0;
+            }
+
+            .chevron.right {
+                right: 0;
+            }
+
+            /* RESPONSIVE */
+            @media (max-width: 768px) {
+                .product-wrapper {
+                    flex: 0 0 33.33%;
+                    /* tampil 3 item */
+                    padding: 10px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .product-wrapper {
+                    flex: 0 0 33.33%;
+                    /* tetap 3 item */
+                }
+            }
+        </style>
+
+        <script>
+            let currentSlide = 0;
+
+            function slide(direction) {
+                const slider = document.getElementById("productSlider");
+                const items = document.querySelectorAll(".product-wrapper");
+                const itemWidth = items[0].offsetWidth + 10; // lebar item + margin
+                const containerWidth = slider.parentElement.offsetWidth;
+                const totalWidth = items.length * itemWidth;
+
+                const maxSlide = Math.ceil((totalWidth - containerWidth) / itemWidth);
+
+                currentSlide += direction;
+                if (currentSlide < 0) currentSlide = 0;
+                if (currentSlide > maxSlide) currentSlide = maxSlide;
+
+                slider.style.transform = `translateX(-${currentSlide * itemWidth}px)`;
+            }
+        </script>
     </section>
+
+
     <div class="border"></div>
 
+    
     <div class="container">
         <div class="wrapper">
             <div class="products-container">
@@ -661,17 +674,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="assets/img/products/macbook air m4.webp" alt="produk 1">
-                        <div class="product-details">
-                            <div class="name-product">
-                                <p class="fw-semibold">Produk 1</p>
-                            </div>
-                            <div class="price-product">
-                                <p class="fw-semibold">Rp 16.700.000</p>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <style>
                         .card {
                             width: 220px;
