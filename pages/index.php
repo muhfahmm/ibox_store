@@ -521,59 +521,83 @@
                 </div>
             </div>
             <style>
-                .product-wrapper:hover {
-                    scale: 1;
-                    cursor: pointer;
-                    transition: .4s;
-                    background: rgba(255, 255, 255, 0.05);
-                    backdrop-filter: blur(37px);
-                    -webkit-backdrop-filter: blur(37px);
-                    border-radius: 10px;
-                    border: 1px solid rgba(255, 255, 255, 0.3);
-                    box-shadow:
-                        0 8px 32px rgba(0, 0, 0, 0.1),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.5),
-                        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-                        inset 0 0 0px 0px rgba(255, 255, 255, 0);
-                    position: relative;
-                    overflow: hidden;
-                }
+    .product-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px; /* jarak antar card */
+        justify-content: space-between;
+    }
 
-                .product-wrapper::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    height: 1px;
-                    background: linear-gradient(90deg,
-                            transparent,
-                            rgba(255, 255, 255, 0.8),
-                            transparent);
-                }
+    .product-wrapper {
+        flex: 1 1 calc(14% - 10px); /* sesuaikan jumlah card per baris */
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        cursor: pointer;
+        position: relative;
+    }
 
-                .product-wrapper::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 1px;
-                    height: 100%;
-                    background: linear-gradient(180deg,
-                            rgba(255, 255, 255, 0.8),
-                            transparent,
-                            rgba(255, 255, 255, 0.3));
-                }
+    .product-wrapper img {
+        height: 80px;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
+    }
 
-                .product-wrapper img {
-                    height: 80px;
-                }
+    .product-wrapper:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
 
-                .product-container {
-                    display: flex;
-                    justify-content: space-between;
-                }
-            </style>
+    .product-wrapper:hover img {
+        transform: scale(1.1);
+    }
+
+    .details-product p {
+        margin: 0;
+    }
+
+    .details-product .fw-bold {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .details-product .fw-semibold {
+        font-size: 13px;
+        color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .product-wrapper {
+            flex: 1 1 calc(20% - 10px);
+        }
+    }
+
+    @media (max-width: 992px) {
+        .product-wrapper {
+            flex: 1 1 calc(30% - 10px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .product-wrapper {
+            flex: 1 1 calc(45% - 10px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .product-wrapper {
+            flex: 1 1 100%;
+        }
+    }
+</style>
+
         </div>
     </section>
     <div class="border"></div>
