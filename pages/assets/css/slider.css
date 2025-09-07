@@ -15,8 +15,7 @@
 
                     .slide img {
                         width: 100%;
-                        /* height: auto; */
-                        max-height: 590px;
+                        max-height: 450px;
                         border-radius: 10px;
                         object-fit: contain;
                     }

@@ -522,7 +522,8 @@
             </div>
             <style>
                 .product-wrapper:hover {
-                    scale: 1.2;
+                    scale: 1;
+                    cursor: pointer;
                     transition: .4s;
                     background: rgba(255, 255, 255, 0.05);
                     backdrop-filter: blur(37px);
@@ -576,6 +577,146 @@
         </div>
     </section>
     <div class="border"></div>
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="products-container">
+                <div class="home-product-list">
+                    <div class="card">
+                        <img src="assets/img/products/macbook air m4.webp" alt="produk 1">
+                        <div class="product-details">
+                            <div class="name-product">
+                                <p class="fw-semibold">Produk 1</p>
+                            </div>
+                            <div class="price-product">
+                                <p class="fw-semibold">Rp 16.700.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/products/macbook air m4.webp" alt="produk 1">
+                        <div class="product-details">
+                            <div class="name-product">
+                                <p class="fw-semibold">Produk 1</p>
+                            </div>
+                            <div class="price-product">
+                                <p class="fw-semibold">Rp 16.700.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/products/macbook air m4.webp" alt="produk 1">
+                        <div class="product-details">
+                            <div class="name-product">
+                                <p class="fw-semibold">Produk 1</p>
+                            </div>
+                            <div class="price-product">
+                                <p class="fw-semibold">Rp 16.700.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/products/macbook air m4.webp" alt="produk 1">
+                        <div class="product-details">
+                            <div class="name-product">
+                                <p class="fw-semibold">Produk 1</p>
+                            </div>
+                            <div class="price-product">
+                                <p class="fw-semibold">Rp 16.700.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/products/macbook air m4.webp" alt="produk 1">
+                        <div class="product-details">
+                            <div class="name-product">
+                                <p class="fw-semibold">Produk 1</p>
+                            </div>
+                            <div class="price-product">
+                                <p class="fw-semibold">Rp 16.700.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/products/macbook air m4.webp" alt="produk 1">
+                        <div class="product-details">
+                            <div class="name-product">
+                                <p class="fw-semibold">Produk 1</p>
+                            </div>
+                            <div class="price-product">
+                                <p class="fw-semibold">Rp 16.700.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .card {
+                            width: 220px;
+                            /* lebar card */
+                            background: #fff;
+                            border-radius: 15px;
+                            overflow: hidden;
+                            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            cursor: pointer;
+                            margin: 15px;
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+
+                        .card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+                        }
+
+                        .card img {
+                            width: 100%;
+                            height: 180px;
+                            object-fit: cover;
+                            transition: transform 0.3s ease;
+                        }
+
+                        .card:hover img {
+                            transform: scale(1.05);
+                        }
+
+                        .product-details {
+                            padding: 12px 15px;
+                            text-align: center;
+                        }
+
+                        .name-product p {
+                            font-size: 16px;
+                            color: #333;
+                            margin: 0 0 8px;
+                        }
+
+                        .price-product p {
+                            font-size: 14px;
+                            color: #E63946;
+                            /* warna harga menonjol */
+                            margin: 0;
+                        }
+
+                        /* Responsive */
+                        @media (max-width: 768px) {
+                            .card {
+                                width: 48%;
+                                margin: 10px 1%;
+                            }
+                        }
+
+                        @media (max-width: 480px) {
+                            .card {
+                                width: 100%;
+                                margin: 10px 0;
+                            }
+                        }
+                    </style>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./assets/js/slider.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
