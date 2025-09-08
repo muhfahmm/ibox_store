@@ -90,7 +90,7 @@
 
             <div class="nav-icons d-flex">
                 <!-- User hanya tampil di md ke atas -->
-                <a href="" class="d-none d-md-block"><i class="bi bi-person"></i></a>
+                <a href="controller/login.php" class="d-none d-md-block"><i class="bi bi-person"></i></a>
                 <!-- Cart tetap tampil di semua ukuran -->
                 <a href=""><i class="bi bi-bag me-2"></i></a>
             </div>
@@ -360,9 +360,20 @@
                     </li>
 
                     <!-- Login khusus mobile -->
-                    <li class="nav-item d-mobile">
-                        <a href="#"><b>Login</b></a>
+                    <li class="nav-item login-header">
+                        <a href="controller/login.php"><b>Login</b></a>
                     </li>
+                    <style>
+                        .login-header {
+                            display: none;
+                        }
+
+                        @media (max-width: 768px) {
+                            .login-header {
+                                display: block;
+                            }
+                        }
+                    </style>
                 </ul>
             </nav>
         </div>
@@ -611,9 +622,7 @@
         </script>
     </section>
 
-
     <div class="border"></div>
-
     
     <div class="container">
         <div class="wrapper">
@@ -674,7 +683,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <style>
                         .card {
                             width: 220px;
