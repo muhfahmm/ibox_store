@@ -391,30 +391,26 @@
 
     <secton class="container mt-5">
         <div class="wrapper mt-3">
-            <h1 class="text-center fw-semibold">Masuk</h1>
+            <h1 class="text-center fw-semibold">Daftar</h1>
             <div class="form-container">
                 <div class="form-wrapper text-center">
                     <form action="" method="post">
                         <div class="input-box">
-                            <div class="name">
-                                <div class="firstname">
-                                    <input type="text" name="firstname" class="form-control">
-                                </div>
-                                <div class="lastname">
-                                    <input type="text" name="lastname" class="form-control">
-                                </div>
-                            </div>
+                            <input type="text" placeholder="firstname">
+                            <input type="text" placeholder="lastname">
                         </div>
                         <div class="input-box">
-                            <input type="text" placeholder="Email" class="form-control" name="email">
+                            <input type="email" placeholder="email">
+                            <input type="number" placeholder="nomor handpone">
                         </div>
                         <div class="input-box">
-                            <input type="password" placeholder="Password" class="form-control" name="password">
+                            <input type="password" placeholder="Password">
+                            <input type="password" placeholder="Konfirmasi Password">
                         </div>
                         <div class="input-box">
-                            <button class="btn btn-primary" name="register">Masuk</button>
+                            <button>Daftar</button>
                         </div>
-                        <a href="register.php">Buat akun</a>
+                        <a href="login.php">Masuk ke akun</a>
                     </form>
                 </div>
             </div>
