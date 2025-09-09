@@ -20,7 +20,7 @@ if (isset($_POST['register'])) {
         echo "input email tidak boleh kosong";
     } elseif ($password1 === "") {
         echo "input password pertama tidak boleh kosong";
-    } elseif ($password2) {
+    } elseif ($password2 ==="") {
         echo "input password kedua tidak boleh kosong";
     } elseif ($password1 !== $password2) {
         echo "kedua password tidak sama";
@@ -29,8 +29,10 @@ if (isset($_POST['register'])) {
         $password1 = password_hash($password1, PASSWORD_BCRYPT);
 
         // tambahkan user ke db
-        mysqli_query($db, "INSERT INTO tb_users VALUES
-        ('', '$firstname', '$lastname', '$nomor_hp', '$gmail', '$password1', '$password2')");
+        mysqli_query($db, "INSERT INTO tb_users
+        (firstname,lastname,no_hp,gmail,password1)
+        VALUES
+        ('', '$firstname', '$lastname', '$nomor_hp', '$email', '$password1', '$password2')");
         // alert konfirmasi jika berhasil ditambahkan
         if (mysqli_affected_rows($db) > 0 ) {
             echo "<script>
@@ -146,7 +148,7 @@ if (isset($_POST['register'])) {
                             <input type="password" placeholder="Konfirmasi Password" name="password2">
                         </div>
                         <div class="input-box">
-                            <button type="button" name="register">Daftar</button>
+                            <button type="submit" name="register">Daftar</button>
                         </div>
                         <a href="login.php">Masuk ke akun</a>
                     </form>
