@@ -29,12 +29,12 @@ if (isset($_POST['register'])) {
         $password1 = password_hash($password1, PASSWORD_BCRYPT);
 
         // tambahkan user ke db
-        mysqli_query($db, "INSERT INTO tb_users
+        mysqli_query($conn, "INSERT INTO tb_users
         (firstname,lastname,no_hp,gmail,password1)
         VALUES
         ('', '$firstname', '$lastname', '$nomor_hp', '$email', '$password1', '$password2')");
         // alert konfirmasi jika berhasil ditambahkan
-        if (mysqli_affected_rows($db) > 0 ) {
+        if (mysqli_affected_rows($conn) > 0 ) {
             echo "<script>
                 alert('User berhasil mendaftar');
                 window.location.href = 'login.php';
